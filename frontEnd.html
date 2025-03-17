@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>neuroStorming</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <div class="social-activities">
+            
+            <h2>Social activities</h2>
+            <p>* This report will be available when you are logged in</p>
+            <div class="activity-summary">
+                <h3>Activity summary</h3>
+                <div class="summary-boxes">
+                    <div class="box">Hours in total</div>
+                    <div class="box">Days accessed</div>
+                    <div class="box">Day streak</div>
+                </div>
+            </div>
+            <div class="friends">
+                <h3>Friends</h3>
+                <input type="text" placeholder="search">
+                <button>Add friend</button>
+                <ul>
+                    <li>Joao</li>
+                    <li>Tiago</li>
+                    <li>Samuel</li>
+                    <li>Leonardo</li>
+                    <li>Sergio</li>
+                    <li>Maria</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <h1>neuroStorming</h1>
+            <div class="settings-icons">
+                <button>⚙️</button>
+                <button>👤</button>
+            </div>
+            <div class="timer-options">
+                <button>short</button>
+                <button>medium</button>
+                <button>long</button>
+            </div>
+            <button class="timer">15s</button>
+            <textarea class="main-textarea" placeholder="Write your ideas..."></textarea>
+        </div>
+        
+        <div class="world-ranking">
+            <h2>World ranking</h2>
+            <h3>Most ideas generated this week</h3>
+            <table>
+                <tr>
+                    <th>User</th>
+                    <th>Points</th>
+                </tr>
+                <tr>
+                    <td>Joao</td>
+                    <td>300</td>
+                </tr>
+                <tr>
+                    <td>Tiago</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>Samuel</td>
+                    <td>150</td>
+                </tr>
+                <tr>
+                    <td>Leonardo</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Sergio</td>
+                    <td>59</td>
+                </tr>
+                <tr>
+                    <td>Maria</td>
+                    <td>9</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const timerButton = document.querySelector(".timer");
+            const buttons = document.querySelectorAll(".timer-options button");
+    
+            buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                    if (button.textContent === "short") {
+                        timerButton.textContent = "10s";
+                    } else if (button.textContent === "medium") {
+                        timerButton.textContent = "15s";
+                    } else if (button.textContent === "long") {
+                        timerButton.textContent = "20s";
+                    }
+                });
+            });
+        });
+    </script>
+    
+    
+</body>
+</html>
